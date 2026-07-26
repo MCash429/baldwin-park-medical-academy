@@ -1,84 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Baldwin Park Medical Academy</title>
-
-<style>
-
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7fb;
-}
-
-header{
-    background:#0057B8;
-    color:white;
-    padding:40px;
-    text-align:center;
-}
-
-h1{
-    margin:0;
-    font-size:48px;
-}
-
-.tagline{
-    margin-top:15px;
-    font-size:24px;
-}
-
-.card{
-    background:white;
-    width:80%;
-    margin:40px auto;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
-}
-
-button{
-    background:#0057B8;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:8px;
-    font-size:18px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#003d82;
-}
-
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Baldwin Park Medical Academy — preparing students for healthcare careers through science, skills, simulation, and service." />
+  <title>Baldwin Park Medical Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<header>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Baldwin Park High School</span>
+        <span class="topbar-motto">Once a Brave, Always a Brave</span>
+      </div>
+    </div>
 
-<h1>Baldwin Park Medical Academy</h1>
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Baldwin Park Medical Academy home">
+        <div class="brand-mark" aria-hidden="true">BP</div>
+        <div>
+          <div class="brand-title">Baldwin Park</div>
+          <div class="brand-subtitle">Medical Academy</div>
+        </div>
+      </a>
 
-<div class="tagline">
-Knowledge • Skills • Service • Leadership
-</div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
 
-</header>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#programs">Programs</a>
+        <a href="#simulation">Simulation Center</a>
+        <a href="#careers">Careers</a>
+        <a href="#alumni">Alumni</a>
+        <a href="#about">About</a>
+        <button class="nav-login" data-open-modal>Student Login</button>
+      </nav>
+    </div>
+  </header>
 
-<div class="card">
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Science • Skills • Service • Career Readiness</p>
+          <h1>Preparing Tomorrow’s Healthcare Professionals</h1>
+          <p class="hero-text">
+            Students build medical knowledge, practice clinical skills, learn through simulation, and explore meaningful healthcare careers while still in high school.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-open-modal>Enter Student Academy</button>
+            <a class="btn btn-secondary" href="#programs">Explore Programs</a>
+          </div>
+          <div class="hero-highlights" aria-label="Academy highlights">
+            <div><strong>4</strong><span>Learning tracks</span></div>
+            <div><strong>3</strong><span>Simulation bays</span></div>
+            <div><strong>20+</strong><span>Healthcare careers</span></div>
+          </div>
+        </div>
 
-<h2>Welcome!</h2>
+        <div class="hero-visual" role="img" aria-label="Students learning healthcare skills in a simulation lab">
+          <div class="visual-panel visual-main">
+            <div class="medical-cross">+</div>
+            <div class="pulse-line" aria-hidden="true"></div>
+            <div class="visual-label">Simulation-Based Learning</div>
+          </div>
+          <div class="visual-card card-one">
+            <span class="icon">🩺</span>
+            <strong>Hands-on Skills</strong>
+            <small>Practice before performance</small>
+          </div>
+          <div class="visual-card card-two">
+            <span class="icon">🎓</span>
+            <strong>Career Pathways</strong>
+            <small>College, training, and careers</small>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<p>
-This is the beginning of the Baldwin Park Medical Academy Online.
-</p>
+    <section class="quick-links" aria-label="Quick links">
+      <div class="container quick-grid">
+        <a href="#programs"><span>🩺</span><strong>Student Learning</strong><small>Courses and modules</small></a>
+        <a href="#simulation"><span>🏥</span><strong>Simulation Center</strong><small>Realistic clinical practice</small></a>
+        <a href="#careers"><span>🎓</span><strong>Career Pathways</strong><small>Explore healthcare futures</small></a>
+        <a href="#alumni"><span>🤝</span><strong>Braves in Healthcare</strong><small>Alumni and mentors</small></a>
+      </div>
+    </section>
 
-<button>Enter Student Portal</button>
+    <section id="programs" class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Explore Our Programs</p>
+          <h2>Four connected learning tracks</h2>
+          <p>Students move from scientific foundations to real-world healthcare skills, simulations, certifications, and career preparation.</p>
+        </div>
 
-</div>
+        <div class="card-grid four">
+          <article class="program-card">
+            <div class="program-icon">🧠</div>
+            <h3>Anatomy &amp; Physiology</h3>
+            <p>Study body systems, medical terminology, injury, disease, and the scientific foundations of patient care.</p>
+            <button class="text-link" data-program="Anatomy & Physiology">View learning track →</button>
+          </article>
+          <article class="program-card">
+            <div class="program-icon">🏃</div>
+            <h3>Sports Medicine</h3>
+            <p>Learn injury prevention, evaluation, emergency care, rehabilitation, prehabilitation, and athletic training skills.</p>
+            <button class="text-link" data-program="Sports Medicine">View learning track →</button>
+          </article>
+          <article class="program-card">
+            <div class="program-icon">❤️</div>
+            <h3>Patient Care</h3>
+            <p>Practice vital signs, infection control, communication, patient safety, professionalism, and essential care skills.</p>
+            <button class="text-link" data-program="Patient Care & Medical Careers">View learning track →</button>
+          </article>
+          <article class="program-card">
+            <div class="program-icon">🚑</div>
+            <h3>Emergency Response</h3>
+            <p>Prepare for CPR, AED, Stop the Bleed, first aid, splinting, wound care, and team-based emergency response.</p>
+            <button class="text-link" data-program="Emergency Response">View learning track →</button>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section id="simulation" class="section section-blue">
+      <div class="container split-section">
+        <div>
+          <p class="eyebrow eyebrow-light">The Simulation Learning Center</p>
+          <h2>Practice in realistic healthcare environments</h2>
+          <p>
+            Students develop clinical judgment, teamwork, communication, and confidence through structured scenarios in emergency, hospital, skilled-nursing, sports medicine, and rehabilitation settings.
+          </p>
+          <ul class="check-list">
+            <li>Emergency and trauma scenarios</li>
+            <li>Hospital and ICU patient care</li>
+            <li>Skilled nursing and vital signs</li>
+            <li>Sports medicine and rehabilitation</li>
+          </ul>
+          <button class="btn btn-white" data-info="Simulation Learning Center">Tour the Simulation Center</button>
+        </div>
+        <div class="sim-grid" aria-label="Simulation center areas">
+          <div><span>ER</span><strong>Emergency Bay</strong></div>
+          <div><span>ICU</span><strong>Hospital Bay</strong></div>
+          <div><span>SNF</span><strong>Patient Care Bay</strong></div>
+          <div><span>REHAB</span><strong>Sports Medicine</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="careers" class="section">
+      <div class="container split-section career-split">
+        <div class="career-graphic" aria-hidden="true">
+          <div class="career-orbit">
+            <div class="orbit-center">Your<br>Future</div>
+            <div class="orbit-item item-1">Nursing</div>
+            <div class="orbit-item item-2">Medicine</div>
+            <div class="orbit-item item-3">PT / OT</div>
+            <div class="orbit-item item-4">EMS</div>
+            <div class="orbit-item item-5">Athletic Training</div>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Careers and College</p>
+          <h2>See where the academy can take you</h2>
+          <p>
+            Students compare education pathways, credentials, college programs, workplace settings, and careers across medicine, nursing, rehabilitation, emergency services, allied health, research, and public health.
+          </p>
+          <div class="career-buttons">
+            <button class="btn btn-primary" data-info="Medical Career Explorer">Open Career Explorer</button>
+            <button class="btn btn-outline" data-info="College Preparation Checklist">College Planning Checklist</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="alumni" class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Braves in Healthcare</p>
+          <h2>Learn from graduates who are already making a difference</h2>
+          <p>Alumni can share their college journeys, career stories, advice, mentoring, and professional expertise with current students.</p>
+        </div>
+        <div class="alumni-layout">
+          <div class="alumni-feature">
+            <div class="profile-placeholder">BP</div>
+            <div>
+              <span class="profile-tag">Alumni Spotlight</span>
+              <h3>Future profile: A Brave in Healthcare</h3>
+              <p>This area will feature real BPHS alumni working in medicine, nursing, physical therapy, athletic training, emergency services, research, and other healthcare professions.</p>
+              <button class="text-link" data-info="Alumni Spotlight">See alumni story →</button>
+            </div>
+          </div>
+          <div class="alumni-actions">
+            <button data-info="Alumni Directory"><span>👥</span>Explore Alumni Directory</button>
+            <button data-info="Volunteer as a Mentor"><span>💬</span>Volunteer as a Mentor</button>
+            <button data-info="Speak to Students"><span>🎤</span>Speak to Students</button>
+            <button data-info="Support the Academy"><span>💙</span>Support the Academy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container mission-box">
+        <div>
+          <p class="eyebrow">Our Mission</p>
+          <h2>Connect classroom learning to real healthcare futures</h2>
+        </div>
+        <p>
+          Baldwin Park Medical Academy prepares students for college, certification, employment, and service through rigorous academics, hands-on learning, simulation, industry partnerships, and a strong community of educators and alumni.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow eyebrow-light">Ready to begin?</p>
+          <h2>Enter the Baldwin Park Medical Academy</h2>
+          <p>The first student module will be Stop the Bleed: Recognizing and Controlling Life-Threatening Bleeding.</p>
+        </div>
+        <button class="btn btn-white" data-open-modal>Preview Student Academy</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Baldwin Park Medical Academy</div>
+        <p>Preparing tomorrow’s healthcare professionals.</p>
+      </div>
+      <div>
+        <strong>Explore</strong>
+        <a href="#programs">Programs</a>
+        <a href="#simulation">Simulation Center</a>
+        <a href="#careers">Careers</a>
+      </div>
+      <div>
+        <strong>Community</strong>
+        <a href="#alumni">Alumni</a>
+        <a href="#about">About</a>
+        <button class="footer-button" data-info="Contact the Academy">Contact</button>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>Prototype for planning and district review</span>
+      <span>© 2026 Baldwin Park Medical Academy</span>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="login-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close dialog">×</button>
+      <div class="modal-icon">🩺</div>
+      <h2 id="modal-title">Student Academy Preview</h2>
+      <p>This prototype shows where students will eventually sign in using a district-approved account.</p>
+      <div class="login-preview">
+        <label>Email or student ID<input type="text" placeholder="student@district.org" disabled></label>
+        <label>Password<input type="password" placeholder="••••••••" disabled></label>
+        <button class="btn btn-primary" id="demo-dashboard">View Demo Dashboard</button>
+      </div>
+      <small>No student information is collected in this prototype.</small>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
