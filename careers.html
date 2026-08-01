@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore healthcare careers at Baldwin Park Medical Academy — browse career profiles or take a quick quiz to find careers that match your interests." />
+  <title>Careers | Baldwin Park Medical Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Baldwin Park High School</span>
+        <span class="topbar-motto">Once a Brave, Always a Brave</span>
+      </div>
+    </div>
+
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Baldwin Park Medical Academy home">
+        <div class="brand-mark" aria-hidden="true">BP</div>
+        <div>
+          <div class="brand-title">Baldwin Park</div>
+          <div class="brand-subtitle">Medical Academy</div>
+        </div>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html#programs">Programs</a>
+        <a href="simulation-center.html">Simulation Center</a>
+        <a href="sports-medicine.html">Sports Medicine</a>
+        <a href="terminology.html">Terminology</a>
+        <a href="careers.html" aria-current="page">Careers</a>
+        <a href="alumni.html">Alumni</a>
+        <button class="nav-login" data-open-modal>Student Login</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="term-hero">
+      <div class="container term-hero-grid">
+        <div>
+          <p class="eyebrow">Careers and College</p>
+          <h1>Healthcare Careers</h1>
+          <p class="hero-text">
+            Healthcare has room for people who love fast-paced emergencies and people who love steady,
+            long-term relationships &mdash; and everything in between. Browse real careers, or take a short
+            quiz to see which ones might fit you.
+          </p>
+        </div>
+
+        <div class="word-anatomy" role="img" aria-label="Healthcare careers range from a one-year certificate to an eight-plus year doctoral path">
+          <div class="career-path-visual">
+            <div class="path-step"><span>1&ndash;2 yrs</span>EMT, Medical Assistant</div>
+            <div class="path-step"><span>2 yrs</span>Radiologic Tech, Dental Hygienist</div>
+            <div class="path-step"><span>4 yrs</span>Registered Nurse</div>
+            <div class="path-step"><span>6&ndash;8+ yrs</span>PA, Pharmacist, Physician</div>
+          </div>
+          <p class="word-anatomy-result">Every path here starts the same place: high school.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="term-controls">
+      <div class="container term-controls-inner">
+        <div class="term-tabs" role="tablist" aria-label="Careers mode">
+          <button class="term-tab active" type="button" role="tab" aria-selected="true" data-career-mode="browse">🗺️ Browse Careers</button>
+          <button class="term-tab" type="button" role="tab" aria-selected="false" data-career-mode="quiz">🧭 Find My Match</button>
+        </div>
+        <div class="term-chips" aria-label="Filter by category" id="career-category-chips">
+          <button class="term-chip active" type="button" data-career-category="all">All</button>
+          <button class="term-chip" type="button" data-career-category="nursing">Nursing &amp; Patient Care</button>
+          <button class="term-chip" type="button" data-career-category="medicine">Medicine &amp; Advanced Practice</button>
+          <button class="term-chip" type="button" data-career-category="rehab">Rehab &amp; Sports Medicine</button>
+          <button class="term-chip" type="button" data-career-category="ems">Emergency Medical Services</button>
+          <button class="term-chip" type="button" data-career-category="diagnostic">Diagnostic &amp; Technical</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BROWSE MODE -->
+    <section id="career-mode-browse" class="term-mode career-mode-section active">
+      <div class="container">
+        <p class="term-empty" id="career-empty" hidden>No careers in this category yet.</p>
+        <div class="career-grid" id="career-list"></div>
+      </div>
+    </section>
+
+    <!-- QUIZ MODE -->
+    <section id="career-mode-quiz" class="term-mode career-mode-section">
+      <div class="container">
+        <div id="career-quiz-body">
+          <p class="term-progress" id="career-quiz-progress">Question 1 of 5</p>
+          <div class="quiz-card">
+            <p class="quiz-question" id="career-quiz-question">Question</p>
+            <div class="quiz-options" id="career-quiz-options"></div>
+          </div>
+        </div>
+
+        <div class="career-quiz-results" id="career-quiz-results" hidden>
+          <h2>Your top career matches</h2>
+          <p class="career-quiz-sub">Based on your answers &mdash; not a test score, just a starting point for research.</p>
+          <div class="career-grid" id="career-quiz-matches"></div>
+          <div class="study-controls">
+            <button class="btn btn-outline" type="button" id="career-quiz-retry">Retake the Quiz</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Baldwin Park Medical Academy</div>
+        <p>Preparing tomorrow’s healthcare professionals.</p>
+      </div>
+      <div>
+        <strong>Explore</strong>
+        <a href="index.html#programs">Programs</a>
+        <a href="simulation-center.html">Simulation Center</a>
+        <a href="careers.html">Careers</a>
+      </div>
+      <div>
+        <strong>Community</strong>
+        <a href="alumni.html">Alumni</a>
+        <a href="index.html#about">About</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>Prototype for planning and district review</span>
+      <span>© 2026 Baldwin Park Medical Academy</span>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="login-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close dialog">×</button>
+      <div class="modal-icon">🩺</div>
+      <h2 id="modal-title">Student Academy Preview</h2>
+      <p>This prototype shows where students will eventually sign in using a district-approved account.</p>
+      <div class="login-preview">
+        <label>Email or student ID<input type="text" placeholder="student@district.org" disabled></label>
+        <label>Password<input type="password" placeholder="••••••••" disabled></label>
+        <button class="btn btn-primary" id="demo-dashboard">View Demo Dashboard</button>
+      </div>
+      <small>No student information is collected in this prototype.</small>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+  <script src="careers.js"></script>
+</body>
+</html>
