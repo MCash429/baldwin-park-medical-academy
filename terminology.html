@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn medical terminology at Baldwin Park Medical Academy — flashcards, a matching game, and a quiz covering common word roots, prefixes, and suffixes." />
+  <title>Medical Terminology | Baldwin Park Medical Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Baldwin Park High School</span>
+        <span class="topbar-motto">Once a Brave, Always a Brave</span>
+      </div>
+    </div>
+
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Baldwin Park Medical Academy home">
+        <div class="brand-mark" aria-hidden="true">BP</div>
+        <div>
+          <div class="brand-title">Baldwin Park</div>
+          <div class="brand-subtitle">Medical Academy</div>
+        </div>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html#programs">Programs</a>
+        <a href="simulation-center.html">Simulation Center</a>
+        <a href="sports-medicine.html">Sports Medicine</a>
+        <a href="terminology.html" aria-current="page">Terminology</a>
+        <a href="alumni.html">Alumni</a>
+        <button class="nav-login" data-open-modal>Student Login</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="term-hero">
+      <div class="container term-hero-grid">
+        <div>
+          <p class="eyebrow">Student Learning</p>
+          <h1>Medical Terminology</h1>
+          <p class="hero-text">
+            Most medical words are built from three kinds of pieces: a word root, a prefix, and a suffix.
+            Learn the pieces, and you can work out words you've never seen before.
+          </p>
+        </div>
+
+        <div class="word-anatomy" role="img" aria-label="The word hepatitis broken into its parts: hepat meaning liver, and itis meaning inflammation">
+          <div class="word-anatomy-word">
+            <span class="chunk chunk-root">hepat</span><span class="chunk chunk-suffix">itis</span>
+          </div>
+          <div class="word-anatomy-key">
+            <div><span class="key-swatch swatch-root"></span>hepat/o &mdash; <strong>liver</strong></div>
+            <div><span class="key-swatch swatch-suffix"></span>-itis &mdash; <strong>inflammation</strong></div>
+          </div>
+          <p class="word-anatomy-result">hepatitis = inflammation of the liver</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="term-controls">
+      <div class="container term-controls-inner">
+        <div class="term-tabs" role="tablist" aria-label="Learning mode">
+          <button class="term-tab active" type="button" role="tab" aria-selected="true" data-mode="study">🗂️ Study</button>
+          <button class="term-tab" type="button" role="tab" aria-selected="false" data-mode="match">🎯 Match</button>
+          <button class="term-tab" type="button" role="tab" aria-selected="false" data-mode="quiz">📝 Quiz</button>
+        </div>
+        <div class="term-chips" aria-label="Filter by category">
+          <button class="term-chip active" type="button" data-category="all">All</button>
+          <button class="term-chip" type="button" data-category="root">Word Roots</button>
+          <button class="term-chip" type="button" data-category="prefix">Prefixes</button>
+          <button class="term-chip" type="button" data-category="suffix">Suffixes</button>
+        </div>
+      </div>
+      <div class="container term-controls-inner term-controls-level">
+        <span class="term-controls-label">Difficulty</span>
+        <div class="term-chips" aria-label="Filter by difficulty">
+          <button class="term-chip active" type="button" data-level="all">All Levels</button>
+          <button class="term-chip" type="button" data-level="1">🟢 Beginner</button>
+          <button class="term-chip" type="button" data-level="2">🟣 Advanced</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDY MODE -->
+    <section id="mode-study" class="term-mode active">
+      <div class="container">
+        <p class="term-empty" id="study-empty" hidden>No terms in this category yet.</p>
+
+        <div id="study-card-wrap">
+          <p class="term-progress" id="study-progress">Card 1 of 15</p>
+
+          <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Flashcard. Tap to reveal the meaning.">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span class="term-badge badge-root" id="flashcard-type-front">Word Root</span>
+                <p class="flashcard-term" id="flashcard-term">cardi/o</p>
+                <p class="flashcard-hint">Tap to reveal meaning</p>
+              </div>
+              <div class="flashcard-face flashcard-back">
+                <span class="term-badge badge-root" id="flashcard-type-back">Word Root</span>
+                <p class="flashcard-meaning" id="flashcard-meaning">heart</p>
+                <p class="flashcard-example" id="flashcard-example">Example: <strong>cardiology</strong> &mdash; the study of the heart</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="study-controls">
+            <button class="btn btn-secondary" type="button" id="study-prev">← Previous</button>
+            <button class="btn btn-outline" type="button" id="study-shuffle">🔀 Shuffle</button>
+            <button class="btn btn-secondary" type="button" id="study-next">Next →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATCH MODE -->
+    <section id="mode-match" class="term-mode">
+      <div class="container">
+        <p class="term-empty" id="match-empty" hidden>No terms in this category yet.</p>
+
+        <div id="match-board-wrap">
+          <div class="match-stats">
+            <div><span>Time</span><strong id="match-time">00:00</strong></div>
+            <div><span>Moves</span><strong id="match-moves">0</strong></div>
+            <button class="btn btn-outline" type="button" id="match-new-round">New Round</button>
+          </div>
+
+          <p class="match-complete" id="match-complete" hidden></p>
+
+          <div class="match-board" id="match-board" aria-live="polite"></div>
+          <p class="match-hint">Tap a term, then tap its matching meaning. Matched pairs lock in place.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ MODE -->
+    <section id="mode-quiz" class="term-mode">
+      <div class="container">
+        <p class="term-empty" id="quiz-empty" hidden>No terms in this category yet.</p>
+
+        <div id="quiz-body">
+          <p class="term-progress" id="quiz-progress">Question 1 of 10 · Score: 0</p>
+
+          <div class="quiz-card">
+            <span class="term-badge badge-root" id="quiz-type">Word Root</span>
+            <p class="quiz-question" id="quiz-question">What does "cardi/o" mean?</p>
+            <div class="quiz-options" id="quiz-options"></div>
+            <p class="quiz-feedback" id="quiz-feedback"></p>
+            <button class="btn btn-primary" type="button" id="quiz-next" hidden>Next question</button>
+          </div>
+        </div>
+
+        <div class="quiz-results" id="quiz-results" hidden>
+          <h2>Quiz complete!</h2>
+          <p id="quiz-score-text">You scored 0 out of 10.</p>
+          <button class="btn btn-primary" type="button" id="quiz-retry">Try Again</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Baldwin Park Medical Academy</div>
+        <p>Preparing tomorrow’s healthcare professionals.</p>
+      </div>
+      <div>
+        <strong>Explore</strong>
+        <a href="index.html#programs">Programs</a>
+        <a href="simulation-center.html">Simulation Center</a>
+        <a href="index.html#careers">Careers</a>
+      </div>
+      <div>
+        <strong>Community</strong>
+        <a href="alumni.html">Alumni</a>
+        <a href="index.html#about">About</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>Prototype for planning and district review</span>
+      <span>© 2026 Baldwin Park Medical Academy</span>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="login-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close dialog">×</button>
+      <div class="modal-icon">🩺</div>
+      <h2 id="modal-title">Student Academy Preview</h2>
+      <p>This prototype shows where students will eventually sign in using a district-approved account.</p>
+      <div class="login-preview">
+        <label>Email or student ID<input type="text" placeholder="student@district.org" disabled></label>
+        <label>Password<input type="password" placeholder="••••••••" disabled></label>
+        <button class="btn btn-primary" id="demo-dashboard">View Demo Dashboard</button>
+      </div>
+      <small>No student information is collected in this prototype.</small>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+  <script src="terminology.js"></script>
+</body>
+</html>

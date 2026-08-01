@@ -1,43 +1,60 @@
+// This file is shared across every page (index.html, simulation-center.html, etc.).
+// Not every page has every element (e.g. some pages don't have a #demo-dashboard
+// button), so every lookup below is guarded with an "if it exists" check.
+// That way script.js never throws an error and stops running partway through
+// just because one page is missing a piece another page has.
+
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 const modal = document.getElementById('login-modal');
 const closeModal = document.querySelector('.modal-close');
 const toast = document.getElementById('toast');
 
-menuToggle.addEventListener('click', () => {
-  const open = siteNav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(open));
-});
-
-document.querySelectorAll('.site-nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    siteNav.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener('click', () => {
+    const open = siteNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(open));
   });
-});
+
+  document.querySelectorAll('.site-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      siteNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
 
 function openLogin() {
+  if (!modal) return;
   modal.hidden = false;
   document.body.style.overflow = 'hidden';
-  closeModal.focus();
+  if (closeModal) closeModal.focus();
 }
 
 function hideLogin() {
+  if (!modal) return;
   modal.hidden = true;
   document.body.style.overflow = '';
 }
 
-document.querySelectorAll('[data-open-modal]').forEach(button => button.addEventListener('click', openLogin));
-closeModal.addEventListener('click', hideLogin);
-modal.addEventListener('click', event => {
-  if (event.target === modal) hideLogin();
+document.querySelectorAll('[data-open-modal], [data-open-login]').forEach(button => {
+  button.addEventListener('click', openLogin);
 });
 
+if (closeModal) closeModal.addEventListener('click', hideLogin);
+
+if (modal) {
+  modal.addEventListener('click', event => {
+    if (event.target === modal) hideLogin();
+  });
+}
+
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && !modal.hidden) hideLogin();
+  if (event.key === 'Escape' && modal && !modal.hidden) hideLogin();
 });
 
 function showToast(message) {
+  if (!toast) return;
   toast.textContent = message;
   toast.classList.add('show');
   clearTimeout(window.toastTimer);
@@ -52,7 +69,10 @@ document.querySelectorAll('[data-program]').forEach(button => {
   button.addEventListener('click', () => showToast(`${button.dataset.program} course page is ready to be designed next.`));
 });
 
-document.getElementById('demo-dashboard').addEventListener('click', () => {
-  hideLogin();
-  showToast('The student dashboard is the next prototype screen after the homepage.');
-});
+const demoDashboardButton = document.getElementById('demo-dashboard');
+if (demoDashboardButton) {
+  demoDashboardButton.addEventListener('click', () => {
+    hideLogin();
+    showToast('The student dashboard is the next prototype screen after the homepage.');
+  });
+}
