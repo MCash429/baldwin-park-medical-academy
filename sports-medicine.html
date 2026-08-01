@@ -1,1056 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the Sports Medicine Pathway at Baldwin Park Medical Academy — clinical skills, work-based learning, college credit, certifications, and healthcare careers." />
   <title>Sports Medicine Pathway | Baldwin Park Medical Academy</title>
-
-  <meta
-    name="description"
-    content="Explore the Baldwin Park Medical Academy Sports Medicine Pathway, including hands-on clinical skills, work-based learning, professional certifications, college credit, SkillsUSA, and career exploration."
-  >
-
-  <style>
-    :root {
-      --royal-blue: #0057b8;
-      --dark-blue: #003b70;
-      --light-blue: #eaf3fb;
-      --very-light-blue: #f5f9fd;
-      --gold: #f2b134;
-      --dark-gray: #263238;
-      --medium-gray: #5f6b73;
-      --light-gray: #e5e9ec;
-      --white: #ffffff;
-      --black: #111111;
-      --shadow: 0 8px 24px rgba(0, 45, 84, 0.10);
-      --radius: 14px;
-      --max-width: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-      color: var(--dark-gray);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    ul {
-      padding-left: 1.25rem;
-    }
-
-    .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
-    }
-
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 1rem;
-      z-index: 9999;
-      padding: 0.75rem 1rem;
-      color: var(--white);
-      background: var(--dark-blue);
-      border-radius: 0 0 8px 8px;
-    }
-
-    .skip-link:focus {
-      top: 0;
-    }
-
-    /* Header */
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      color: var(--white);
-      background: var(--dark-blue);
-      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 76px;
-      gap: 2rem;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-    }
-
-    .brand-mark {
-      display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      flex: 0 0 46px;
-      font-size: 0.95rem;
-      font-weight: 900;
-      color: var(--dark-blue);
-      background: var(--white);
-      border-radius: 50%;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.15;
-    }
-
-    .brand-text span:first-child {
-      font-size: 1.02rem;
-    }
-
-    .brand-text span:last-child {
-      margin-top: 0.2rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-      opacity: 0.85;
-    }
-
-    .site-nav ul {
-      display: flex;
-      align-items: center;
-      gap: 0.2rem;
-      padding: 0;
-      list-style: none;
-    }
-
-    .site-nav a {
-      display: block;
-      padding: 0.7rem 0.8rem;
-      font-size: 0.92rem;
-      font-weight: 650;
-      border-radius: 8px;
-    }
-
-    .site-nav a:hover,
-    .site-nav a:focus-visible,
-    .site-nav a[aria-current="page"] {
-      background: rgba(255, 255, 255, 0.14);
-    }
-
-    .menu-toggle {
-      display: none;
-      padding: 0.55rem 0.7rem;
-      color: var(--white);
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.55);
-      border-radius: 8px;
-      font: inherit;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* Hero */
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      color: var(--white);
-      background:
-        linear-gradient(
-          115deg,
-          rgba(0, 40, 78, 0.97),
-          rgba(0, 87, 184, 0.91)
-        );
-    }
-
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.07);
-    }
-
-    .hero::before {
-      width: 420px;
-      height: 420px;
-      top: -190px;
-      right: -110px;
-    }
-
-    .hero::after {
-      width: 270px;
-      height: 270px;
-      bottom: -145px;
-      left: 42%;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      align-items: center;
-      gap: 3.5rem;
-      min-height: 560px;
-      padding: 5rem 0;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.35rem 0.75rem;
-      font-size: 0.83rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--dark-blue);
-      background: var(--gold);
-      border-radius: 999px;
-    }
-
-    .hero h1 {
-      max-width: 780px;
-      font-size: clamp(2.5rem, 5.5vw, 5rem);
-      line-height: 1.02;
-      letter-spacing: -0.045em;
-    }
-
-    .hero-lead {
-      max-width: 760px;
-      margin-top: 1.35rem;
-      font-size: clamp(1.05rem, 2vw, 1.3rem);
-      color: rgba(255, 255, 255, 0.91);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      margin-top: 2rem;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0.8rem 1.15rem;
-      font-weight: 800;
-      border: 2px solid transparent;
-      border-radius: 9px;
-      transition:
-        transform 0.18s ease,
-        background 0.18s ease,
-        border-color 0.18s ease;
-    }
-
-    .button:hover,
-    .button:focus-visible {
-      transform: translateY(-2px);
-    }
-
-    .button-primary {
-      color: var(--dark-blue);
-      background: var(--gold);
-    }
-
-    .button-secondary {
-      color: var(--white);
-      background: transparent;
-      border-color: rgba(255, 255, 255, 0.75);
-    }
-
-    .button-secondary:hover,
-    .button-secondary:focus-visible {
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .hero-panel {
-      padding: 1.7rem;
-      background: rgba(255, 255, 255, 0.11);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: var(--radius);
-      backdrop-filter: blur(6px);
-    }
-
-    .hero-panel h2 {
-      margin-bottom: 1rem;
-      font-size: 1.35rem;
-    }
-
-    .hero-panel ul {
-      display: grid;
-      gap: 0.85rem;
-      padding: 0;
-      list-style: none;
-    }
-
-    .hero-panel li {
-      position: relative;
-      padding-left: 1.7rem;
-      color: rgba(255, 255, 255, 0.95);
-    }
-
-    .hero-panel li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-weight: 900;
-      color: var(--gold);
-    }
-
-    /* General sections */
-
-    section {
-      scroll-margin-top: 92px;
-    }
-
-    .section {
-      padding: 5.5rem 0;
-    }
-
-    .section-alt {
-      background: var(--very-light-blue);
-    }
-
-    .section-heading {
-      max-width: 780px;
-      margin-bottom: 2.7rem;
-    }
-
-    .section-label {
-      display: block;
-      margin-bottom: 0.65rem;
-      font-size: 0.82rem;
-      font-weight: 850;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--royal-blue);
-    }
-
-    .section-heading h2 {
-      font-size: clamp(2rem, 4vw, 3.25rem);
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-      color: var(--dark-blue);
-    }
-
-    .section-heading p {
-      margin-top: 1rem;
-      font-size: 1.08rem;
-      color: var(--medium-gray);
-    }
-
-    /* Intro */
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .intro-copy p + p {
-      margin-top: 1rem;
-    }
-
-    .feature-list {
-      display: grid;
-      gap: 1rem;
-      padding: 0;
-      list-style: none;
-    }
-
-    .feature-list li {
-      position: relative;
-      padding: 1.05rem 1.1rem 1.05rem 3.05rem;
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: 10px;
-      box-shadow: 0 4px 14px rgba(0, 45, 84, 0.05);
-    }
-
-    .feature-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 1.1rem;
-      top: 1rem;
-      display: grid;
-      place-items: center;
-      width: 1.35rem;
-      height: 1.35rem;
-      font-size: 0.85rem;
-      font-weight: 900;
-      color: var(--white);
-      background: var(--royal-blue);
-      border-radius: 50%;
-    }
-
-    /* Cards */
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
-    }
-
-    .card {
-      height: 100%;
-      padding: 1.6rem;
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .card-icon {
-      display: grid;
-      place-items: center;
-      width: 48px;
-      height: 48px;
-      margin-bottom: 1rem;
-      font-size: 1.35rem;
-      background: var(--light-blue);
-      border-radius: 12px;
-    }
-
-    .card h3 {
-      margin-bottom: 0.65rem;
-      font-size: 1.22rem;
-      line-height: 1.3;
-      color: var(--dark-blue);
-    }
-
-    .card p {
-      color: var(--medium-gray);
-    }
-
-    /* Learning center */
-
-    .split-layout {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .visual-panel {
-      min-height: 390px;
-      display: flex;
-      align-items: flex-end;
-      padding: 2rem;
-      color: var(--white);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(0, 59, 112, 0.95),
-          rgba(0, 87, 184, 0.78)
-        ),
-        var(--royal-blue);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .visual-panel-content {
-      max-width: 450px;
-    }
-
-    .visual-panel h3 {
-      margin-bottom: 0.7rem;
-      font-size: 1.8rem;
-      line-height: 1.2;
-    }
-
-    .visual-panel p {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .content-block h2 {
-      margin-bottom: 1rem;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-      color: var(--dark-blue);
-    }
-
-    .content-block p + p {
-      margin-top: 1rem;
-    }
-
-    .content-block ul {
-      display: grid;
-      gap: 0.65rem;
-      margin-top: 1.35rem;
-    }
-
-    /* Skills */
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
-
-    .skill-item {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 1rem;
-      padding: 1.25rem;
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: 12px;
-    }
-
-    .skill-number {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      font-weight: 900;
-      color: var(--white);
-      background: var(--royal-blue);
-      border-radius: 10px;
-    }
-
-    .skill-item h3 {
-      margin-bottom: 0.3rem;
-      color: var(--dark-blue);
-    }
-
-    .skill-item p {
-      color: var(--medium-gray);
-    }
-
-    /* Work-based learning */
-
-    .wbl-band {
-      color: var(--white);
-      background: var(--dark-blue);
-    }
-
-    .wbl-band .section-label {
-      color: var(--gold);
-    }
-
-    .wbl-band .section-heading h2,
-    .wbl-band .section-heading p {
-      color: var(--white);
-    }
-
-    .wbl-band .section-heading p {
-      opacity: 0.86;
-    }
-
-    .wbl-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem;
-    }
-
-    .wbl-card {
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.09);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-    }
-
-    .wbl-card h3 {
-      margin-bottom: 0.55rem;
-      color: var(--gold);
-    }
-
-    .wbl-card p {
-      color: rgba(255, 255, 255, 0.86);
-    }
-
-    /* College credit */
-
-    .credit-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    .credit-card {
-      position: relative;
-      overflow: hidden;
-      padding: 1.75rem;
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .credit-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 6px;
-      background: var(--royal-blue);
-    }
-
-    .course-code {
-      display: inline-block;
-      margin-bottom: 0.85rem;
-      padding: 0.35rem 0.7rem;
-      font-size: 0.84rem;
-      font-weight: 900;
-      color: var(--dark-blue);
-      background: var(--light-blue);
-      border-radius: 999px;
-    }
-
-    .credit-card h3 {
-      margin-bottom: 0.45rem;
-      color: var(--dark-blue);
-    }
-
-    .credit-card .units {
-      margin-top: 1rem;
-      font-weight: 850;
-      color: var(--royal-blue);
-    }
-
-    .credit-highlight {
-      margin-top: 1.7rem;
-      padding: 1.3rem 1.45rem;
-      text-align: center;
-      color: var(--white);
-      background: var(--royal-blue);
-      border-radius: 12px;
-    }
-
-    .credit-highlight strong {
-      color: var(--gold);
-    }
-
-    /* Certifications */
-
-    .cert-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    .cert-card {
-      display: flex;
-      gap: 1.1rem;
-      padding: 1.6rem;
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .cert-badge {
-      display: grid;
-      place-items: center;
-      width: 54px;
-      height: 54px;
-      flex: 0 0 54px;
-      font-size: 1.45rem;
-      color: var(--white);
-      background: var(--royal-blue);
-      border-radius: 50%;
-    }
-
-    .cert-card h3 {
-      margin-bottom: 0.5rem;
-      line-height: 1.3;
-      color: var(--dark-blue);
-    }
-
-    .cert-card p {
-      color: var(--medium-gray);
-    }
-
-    /* SkillsUSA */
-
-    .skillsusa-box {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 2.5rem;
-      align-items: center;
-      padding: 2.5rem;
-      background: var(--light-blue);
-      border: 1px solid #cbdfee;
-      border-radius: var(--radius);
-    }
-
-    .skillsusa-emblem {
-      display: grid;
-      place-items: center;
-      min-height: 250px;
-      padding: 1.5rem;
-      text-align: center;
-      color: var(--white);
-      background: var(--royal-blue);
-      border-radius: 12px;
-    }
-
-    .skillsusa-emblem span {
-      display: block;
-      font-size: 2rem;
-      font-weight: 900;
-      line-height: 1.1;
-    }
-
-    .skillsusa-content h2 {
-      margin-bottom: 1rem;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.12;
-      color: var(--dark-blue);
-    }
-
-    .skillsusa-content p + p {
-      margin-top: 1rem;
-    }
-
-    /* Careers */
-
-    .career-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-    }
-
-    .career-item {
-      padding: 1.25rem;
-      text-align: center;
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: 10px;
-    }
-
-    .career-item strong {
-      display: block;
-      color: var(--dark-blue);
-    }
-
-    .career-note {
-      max-width: 800px;
-      margin-top: 1.5rem;
-      color: var(--medium-gray);
-    }
-
-    /* CTA */
-
-    .cta {
-      padding: 4.5rem 0;
-      color: var(--white);
-      background:
-        linear-gradient(
-          115deg,
-          var(--dark-blue),
-          var(--royal-blue)
-        );
-    }
-
-    .cta-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .cta h2 {
-      font-size: clamp(2rem, 4vw, 3.15rem);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-    }
-
-    .cta p {
-      max-width: 700px;
-      margin-top: 0.8rem;
-      color: rgba(255, 255, 255, 0.88);
-    }
-
-    /* Footer */
-
-    .site-footer {
-      padding: 2.8rem 0 1.4rem;
-      color: rgba(255, 255, 255, 0.82);
-      background: #082b4c;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr 0.7fr;
-      gap: 2rem;
-      padding-bottom: 2rem;
-    }
-
-    .site-footer h2,
-    .site-footer h3 {
-      color: var(--white);
-    }
-
-    .site-footer h2 {
-      font-size: 1.25rem;
-    }
-
-    .site-footer h3 {
-      margin-bottom: 0.65rem;
-      font-size: 1rem;
-    }
-
-    .site-footer p {
-      margin-top: 0.65rem;
-      max-width: 500px;
-    }
-
-    .footer-links {
-      display: grid;
-      gap: 0.45rem;
-      padding: 0;
-      list-style: none;
-    }
-
-    .footer-links a:hover,
-    .footer-links a:focus-visible {
-      color: var(--white);
-      text-decoration: underline;
-    }
-
-    .footer-bottom {
-      padding-top: 1.35rem;
-      font-size: 0.87rem;
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    /* Responsive */
-
-    @media (max-width: 980px) {
-      .menu-toggle {
-        display: inline-block;
-      }
-
-      .site-nav {
-        position: absolute;
-        top: 76px;
-        left: 0;
-        right: 0;
-        display: none;
-        padding: 0.75rem 4%;
-        background: var(--dark-blue);
-        border-top: 1px solid rgba(255, 255, 255, 0.16);
-      }
-
-      .site-nav.is-open {
-        display: block;
-      }
-
-      .site-nav ul {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .site-nav a {
-        padding: 0.85rem;
-      }
-
-      .hero-inner,
-      .split-layout,
-      .skillsusa-box {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-inner {
-        min-height: auto;
-      }
-
-      .hero-panel {
-        max-width: 650px;
-      }
-
-      .card-grid,
-      .wbl-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .career-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .section {
-        padding: 4rem 0;
-      }
-
-      .hero-inner {
-        padding: 4rem 0;
-      }
-
-      .intro-grid,
-      .card-grid,
-      .skills-grid,
-      .wbl-grid,
-      .credit-grid,
-      .cert-grid,
-      .career-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .brand-text span:last-child {
-        display: none;
-      }
-
-      .visual-panel {
-        min-height: 310px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition: none !important;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Baldwin Park Medical Academy home">
-        <span class="brand-mark" aria-hidden="true">BP</span>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Baldwin Park High School</span>
+        <span class="topbar-motto">Once a Brave, Always a Brave</span>
+      </div>
+    </div>
 
-        <span class="brand-text">
-          <span>Baldwin Park Medical Academy</span>
-          <span>From Baldwin Park to Healthcare Careers</span>
-        </span>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Baldwin Park Medical Academy home">
+        <div class="brand-mark" aria-hidden="true">BP</div>
+        <div>
+          <div class="brand-title">Baldwin Park</div>
+          <div class="brand-subtitle">Medical Academy</div>
+        </div>
       </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="primary-navigation"
-      >
-        Menu
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
       </button>
 
-      <nav
-        class="site-nav"
-        id="primary-navigation"
-        aria-label="Primary navigation"
-      >
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-
-          <li>
-            <a
-              href="sports-medicine.html"
-              aria-current="page"
-            >
-              Sports Medicine
-            </a>
-          </li>
-
-          <li>
-            <a href="careers.html">Medical Careers</a>
-          </li>
-
-          <li>
-            <a href="simulation-center.html">Simulation Center</a>
-          </li>
-
-          <li>
-            <a href="terminology.html">Terminology</a>
-          </li>
-
-          <li>
-            <a href="certifications.html">Certifications</a>
-          </li>
-
-          <li>
-            <a href="alumni.html">Alumni</a>
-          </li>
-        </ul>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html#programs">Programs</a>
+        <a href="simulation-center.html">Simulation Center</a>
+        <a href="sports-medicine.html" aria-current="page">Sports Medicine</a>
+        <a href="terminology.html">Terminology</a>
+        <a href="careers.html">Careers</a>
+        <a href="alumni.html">Alumni</a>
+        <button class="nav-login" data-open-modal>Student Login</button>
       </nav>
     </div>
   </header>
 
-  <main id="main-content">
-    <section class="hero">
-      <div class="container hero-inner">
+  <main id="main">
+    <section class="term-hero">
+      <div class="container term-hero-grid">
         <div>
-          <span class="eyebrow">Career Technical Education</span>
-
+          <p class="eyebrow">Career Technical Education</p>
           <h1>Sports Medicine Pathway</h1>
-
-          <p class="hero-lead">
-            Students develop healthcare knowledge, practical clinical skills,
-            professional habits, and a stronger understanding of careers in
-            sports medicine and related health professions.
+          <p class="hero-text">
+            Students develop healthcare knowledge, practical clinical skills, professional habits, and a
+            stronger understanding of careers in sports medicine and related health professions.
           </p>
-
           <div class="hero-actions">
-            <a class="button button-primary" href="#pathway">
-              Explore the Pathway
-            </a>
-
-            <a class="button button-secondary" href="#college-credit">
-              View College Credit
-            </a>
+            <a class="btn btn-primary" href="#pathway">Explore the Pathway</a>
+            <a class="btn btn-secondary" href="#college-credit">View College Credit</a>
           </div>
         </div>
 
-        <aside class="hero-panel" aria-label="Pathway highlights">
-          <h2>Pathway Highlights</h2>
-
-          <ul>
+        <div class="word-anatomy">
+          <h3>Pathway Highlights</h3>
+          <ul class="check-list" style="text-align:left">
             <li>Hands-on learning in a dedicated Sports Medicine Learning Center</li>
             <li>Clinical skill development using industry-standard equipment</li>
             <li>Authentic work-based learning experiences</li>
@@ -1058,166 +73,73 @@
             <li>Up to six units of articulated college credit</li>
             <li>Leadership and competition through SkillsUSA</li>
           </ul>
-        </aside>
+        </div>
       </div>
     </section>
 
     <section class="section" id="pathway">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-label">Why Choose Sports Medicine?</span>
-
-          <h2>
-            Build knowledge and skills that connect the classroom to healthcare
-            careers.
-          </h2>
-
+      <div class="container split-section">
+        <div>
+          <p class="eyebrow">Why Choose Sports Medicine?</p>
+          <h2>Build knowledge and skills that connect the classroom to healthcare careers.</h2>
           <p>
-            The Sports Medicine Pathway combines academic instruction,
-            practical skill development, work-based learning, career
-            exploration, professional certifications, and college credit
-            opportunities.
+            Students examine the structure and function of the human body, learn how injuries occur, and study
+            the principles used to prevent, evaluate, and care for common injuries.
+          </p>
+          <p>
+            The pathway also places strong emphasis on communication, teamwork, safety, professionalism, and
+            responsible decision-making. These skills prepare students for further education and a wide range
+            of healthcare careers.
           </p>
         </div>
-
-        <div class="intro-grid">
-          <div class="intro-copy">
-            <p>
-              Students examine the structure and function of the human body,
-              learn how injuries occur, and study the principles used to
-              prevent, evaluate, and care for common injuries.
-            </p>
-
-            <p>
-              The pathway also places strong emphasis on communication,
-              teamwork, safety, professionalism, and responsible decision-making.
-              These skills prepare students for further education and a wide
-              range of healthcare careers.
-            </p>
-
-            <p>
-              Learning extends beyond textbooks. Students practice skills,
-              apply classroom knowledge, work with healthcare professionals,
-              and gain experience in environments designed to reflect
-              professional expectations.
-            </p>
-          </div>
-
-          <ul class="feature-list">
-            <li>
-              Apply anatomy and medical terminology in practical situations.
-            </li>
-
-            <li>
-              Develop injury-prevention and patient-care skills.
-            </li>
-
-            <li>
-              Practice professional communication and teamwork.
-            </li>
-
-            <li>
-              Learn through demonstrations, simulations, and hands-on activities.
-            </li>
-
-            <li>
-              Explore college programs and careers in healthcare.
-            </li>
-          </ul>
-        </div>
+        <ul class="check-list">
+          <li>Apply anatomy and medical terminology in practical situations.</li>
+          <li>Develop injury-prevention and patient-care skills.</li>
+          <li>Practice professional communication and teamwork.</li>
+          <li>Learn through demonstrations, simulations, and hands-on activities.</li>
+          <li>Explore college programs and careers in healthcare.</li>
+        </ul>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-light">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label">About the Pathway</span>
-
-          <h2>
-            A connected sequence of learning experiences.
-          </h2>
-
-          <p>
-            Students move from foundational knowledge to more advanced
-            applications while developing confidence, technical skills, and
-            professional responsibility.
-          </p>
+          <p class="eyebrow">About the Pathway</p>
+          <h2>A connected sequence of learning experiences.</h2>
+          <p>Students move from foundational knowledge to more advanced applications while developing confidence, technical skills, and professional responsibility.</p>
         </div>
-
-        <div class="card-grid">
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🫀</div>
-
+        <div class="card-grid three">
+          <article class="program-card">
+            <div class="program-icon">🫀</div>
             <h3>Anatomy and Physiology</h3>
-
-            <p>
-              Students study body systems, medical terminology, movement,
-              health, injury, and the relationships between structure and
-              function.
-            </p>
+            <p>Students study body systems, medical terminology, movement, health, injury, and the relationships between structure and function.</p>
           </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🩺</div>
-
+          <article class="program-card">
+            <div class="program-icon">🩺</div>
             <h3>Sports Medicine</h3>
-
-            <p>
-              Students apply foundational science to injury prevention,
-              evaluation, immediate care, rehabilitation principles, and
-              healthcare practice.
-            </p>
+            <p>Students apply foundational science to injury prevention, evaluation, immediate care, rehabilitation principles, and healthcare practice.</p>
           </article>
-
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">🤝</div>
-
+          <article class="program-card">
+            <div class="program-icon">🤝</div>
             <h3>Career Preparation</h3>
-
-            <p>
-              Students strengthen communication, leadership, collaboration,
-              reliability, and other habits expected in college and the
-              workplace.
-            </p>
+            <p>Students strengthen communication, leadership, collaboration, reliability, and other habits expected in college and the workplace.</p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section" id="learning-center">
-      <div class="container split-layout">
-        <div class="visual-panel">
-          <div class="visual-panel-content">
-            <h3>Sports Medicine Learning Center</h3>
-
-            <p>
-              A dedicated environment where students can practice skills,
-              apply course content, and learn to use equipment commonly found
-              in sports medicine and rehabilitation settings.
-            </p>
-          </div>
+      <div class="container split-section">
+        <div class="gradient-panel">
+          <h3>Sports Medicine Learning Center</h3>
+          <p>A dedicated environment where students can practice skills, apply course content, and learn to use equipment commonly found in sports medicine and rehabilitation settings.</p>
         </div>
-
-        <div class="content-block">
-          <span class="section-label">Hands-On Learning</span>
-
-          <h2>
-            A dedicated space for practice, application, and skill development.
-          </h2>
-
-          <p>
-            The Sports Medicine Learning Center supports active learning and
-            gives students opportunities to move from explanation and
-            demonstration to guided practice.
-          </p>
-
-          <p>
-            Students use industry-standard equipment while learning safe
-            procedures, proper technique, organization, communication, and
-            professional conduct.
-          </p>
-
-          <ul>
+        <div>
+          <p class="eyebrow">Hands-On Learning</p>
+          <h2>A dedicated space for practice, application, and skill development.</h2>
+          <p>The Sports Medicine Learning Center supports active learning and gives students opportunities to move from explanation and demonstration to guided practice.</p>
+          <ul class="check-list">
             <li>Injury evaluation and observation activities</li>
             <li>Protective taping and wrapping techniques</li>
             <li>Rehabilitation and therapeutic exercise principles</li>
@@ -1229,468 +151,216 @@
       </div>
     </section>
 
-    <section class="section section-alt" id="clinical-skills">
+    <section class="section section-light" id="clinical-skills">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label">Clinical Skills</span>
-
-          <h2>
-            Students learn through purposeful practice.
-          </h2>
-
-          <p>
-            Instruction emphasizes safety, accuracy, communication, and
-            understanding—not simply completing a procedure.
-          </p>
+          <p class="eyebrow">Clinical Skills</p>
+          <h2>Students learn through purposeful practice.</h2>
+          <p>Instruction emphasizes safety, accuracy, communication, and understanding&mdash;not simply completing a procedure.</p>
         </div>
-
-        <div class="skills-grid">
-          <article class="skill-item">
-            <div class="skill-number">1</div>
-
-            <div>
-              <h3>Injury Prevention</h3>
-
-              <p>
-                Students examine risk factors, conditioning, protective
-                equipment, body mechanics, and strategies that may reduce
-                injury.
-              </p>
-            </div>
+        <div class="card-grid three">
+          <article class="program-card">
+            <div class="program-icon">1</div>
+            <h3>Injury Prevention</h3>
+            <p>Students examine risk factors, conditioning, protective equipment, body mechanics, and strategies that may reduce injury.</p>
           </article>
-
-          <article class="skill-item">
-            <div class="skill-number">2</div>
-
-            <div>
-              <h3>Injury Evaluation</h3>
-
-              <p>
-                Students practice observation, history-taking, basic assessment,
-                and communication within the appropriate scope of a high school
-                learning environment.
-              </p>
-            </div>
+          <article class="program-card">
+            <div class="program-icon">2</div>
+            <h3>Injury Evaluation</h3>
+            <p>Students practice observation, history-taking, basic assessment, and communication within the appropriate scope of a high school learning environment.</p>
           </article>
-
-          <article class="skill-item">
-            <div class="skill-number">3</div>
-
-            <div>
-              <h3>Taping and Wrapping</h3>
-
-              <p>
-                Students learn the purposes, limitations, safety considerations,
-                and techniques used in common supportive applications.
-              </p>
-            </div>
+          <article class="program-card">
+            <div class="program-icon">3</div>
+            <h3>Taping and Wrapping</h3>
+            <p>Students learn the purposes, limitations, safety considerations, and techniques used in common supportive applications.</p>
           </article>
-
-          <article class="skill-item">
-            <div class="skill-number">4</div>
-
-            <div>
-              <h3>Emergency Response</h3>
-
-              <p>
-                Students practice recognizing emergencies, activating the
-                response system, providing immediate care, and working as part
-                of a team.
-              </p>
-            </div>
+          <article class="program-card">
+            <div class="program-icon">4</div>
+            <h3>Emergency Response</h3>
+            <p>Students practice recognizing emergencies, activating the response system, providing immediate care, and working as part of a team.</p>
           </article>
-
-          <article class="skill-item">
-            <div class="skill-number">5</div>
-
-            <div>
-              <h3>Rehabilitation Principles</h3>
-
-              <p>
-                Students study range of motion, strength, balance,
-                flexibility, progression, and safe return-to-activity concepts.
-              </p>
-            </div>
+          <article class="program-card">
+            <div class="program-icon">5</div>
+            <h3>Rehabilitation Principles</h3>
+            <p>Students study range of motion, strength, balance, flexibility, progression, and safe return-to-activity concepts.</p>
           </article>
-
-          <article class="skill-item">
-            <div class="skill-number">6</div>
-
-            <div>
-              <h3>Professional Communication</h3>
-
-              <p>
-                Students practice listening, asking appropriate questions,
-                documenting information, protecting privacy, and communicating
-                respectfully.
-              </p>
-            </div>
+          <article class="program-card">
+            <div class="program-icon">6</div>
+            <h3>Professional Communication</h3>
+            <p>Students practice listening, asking appropriate questions, documenting information, protecting privacy, and communicating respectfully.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section wbl-band" id="work-based-learning">
+    <section class="section" id="work-based-learning">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label">Work-Based Learning</span>
-
-          <h2>
-            Authentic experiences with healthcare professionals.
-          </h2>
-
-          <p>
-            Work-based learning helps students understand how classroom
-            knowledge, technical skills, communication, and professional
-            behavior are used in real settings.
-          </p>
+          <p class="eyebrow">Work-Based Learning</p>
+          <h2>Authentic experiences with healthcare professionals.</h2>
+          <p>Work-based learning helps students understand how classroom knowledge, technical skills, communication, and professional behavior are used in real settings.</p>
         </div>
-
-        <div class="wbl-grid">
-          <article class="wbl-card">
+        <div class="card-grid three">
+          <article class="program-card">
             <h3>Certified Athletic Trainers</h3>
-
-            <p>
-              Students learn from Certified Athletic Trainers and observe how
-              professionals make decisions, communicate, organize care, and
-              respond to injuries.
-            </p>
+            <p>Students learn from Certified Athletic Trainers and observe how professionals make decisions, communicate, organize care, and respond to injuries.</p>
           </article>
-
-          <article class="wbl-card">
+          <article class="program-card">
             <h3>Authentic Experiences</h3>
-
-            <p>
-              Students participate in structured activities that connect
-              classroom learning to the expectations and responsibilities of
-              healthcare workplaces.
-            </p>
+            <p>Students participate in structured activities that connect classroom learning to the expectations and responsibilities of healthcare workplaces.</p>
           </article>
-
-          <article class="wbl-card">
+          <article class="program-card">
             <h3>Professional Habits</h3>
-
-            <p>
-              Students develop reliability, teamwork, confidentiality,
-              respectful communication, initiative, and attention to safety.
-            </p>
+            <p>Students develop reliability, teamwork, confidentiality, respectful communication, initiative, and attention to safety.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="college-credit">
+    <section class="section section-light" id="college-credit">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label">College Credit Opportunities</span>
-
-          <h2>
-            Earn articulated college credit through Mt. San Antonio College.
-          </h2>
-
-          <p>
-            Students who meet course requirements and pass the appropriate
-            articulation examination earn college credit.
-          </p>
+          <p class="eyebrow">College Credit Opportunities</p>
+          <h2>Earn articulated college credit through Mt. San Antonio College.</h2>
+          <p>Students who meet course requirements and pass the appropriate articulation examination earn college credit.</p>
         </div>
-
-        <div class="credit-grid">
-          <article class="credit-card">
-            <span class="course-code">MEDI 90</span>
-
+        <div class="card-grid two">
+          <article class="program-card">
+            <span class="term-badge badge-root">MEDI 90</span>
             <h3>Medical Terminology</h3>
-
-            <p>
-              The Anatomy and Physiology course is articulated with
-              Medical Terminology at Mt. San Antonio College.
-            </p>
-
-            <p class="units">3 college units</p>
+            <p>The Anatomy and Physiology course is articulated with Medical Terminology at Mt. San Antonio College.</p>
+            <p><strong>3 college units</strong></p>
           </article>
-
-          <article class="credit-card">
-            <span class="course-code">KIN 19</span>
-
+          <article class="program-card">
+            <span class="term-badge badge-root">KIN 19</span>
             <h3>Care and Prevention of Athletic Injuries</h3>
-
-            <p>
-              The Sports Medicine course is articulated with Care and
-              Prevention of Athletic Injuries at Mt. San Antonio College.
-            </p>
-
-            <p class="units">3 college units</p>
+            <p>The Sports Medicine course is articulated with Care and Prevention of Athletic Injuries at Mt. San Antonio College.</p>
+            <p><strong>3 college units</strong></p>
           </article>
         </div>
-
-        <div class="credit-highlight">
-          Students who pass both articulation examinations earn a total of
-          <strong>6 college units.</strong>
-        </div>
+        <p class="match-complete" style="max-width:640px;margin-top:26px">
+          Students who pass both articulation examinations earn a total of <strong>6 college units.</strong>
+        </p>
       </div>
     </section>
 
     <section class="section" id="certifications">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label">Professional Certifications</span>
-
-          <h2>
-            Students can earn recognized emergency-care credentials.
-          </h2>
-
-          <p>
-            Certification instruction strengthens readiness, confidence,
-            teamwork, and the ability to respond appropriately during an
-            emergency.
-          </p>
+          <p class="eyebrow">Professional Certifications</p>
+          <h2>Students can earn recognized emergency-care credentials.</h2>
+          <p>Certification instruction strengthens readiness, confidence, teamwork, and the ability to respond appropriately during an emergency.</p>
         </div>
-
-        <div class="cert-grid">
-          <article class="cert-card">
-            <div class="cert-badge" aria-hidden="true">♥</div>
-
+        <div class="icon-row-list">
+          <div class="icon-row-item on-light">
+            <div class="icon-row-badge">♥</div>
             <div>
-              <h3>
-                American Heart Association Basic Life Support for Healthcare
-                Providers
-              </h3>
-
-              <p>
-                Students learn high-quality CPR, use of an automated external
-                defibrillator, team-based response, and care for choking
-                emergencies.
-              </p>
+              <h3>American Heart Association Basic Life Support for Healthcare Providers</h3>
+              <p>Students learn high-quality CPR, use of an automated external defibrillator, team-based response, and care for choking emergencies.</p>
             </div>
-          </article>
-
-          <article class="cert-card">
-            <div class="cert-badge" aria-hidden="true">✚</div>
-
-            <div>
-              <h3>Stop the Bleed®</h3>
-
-              <p>
-                Students learn how to recognize life-threatening bleeding and
-                provide immediate care using direct pressure, wound packing,
-                and tourniquet application.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="skillsusa">
-      <div class="container">
-        <div class="skillsusa-box">
-          <div class="skillsusa-emblem" aria-hidden="true">
-            <span>SkillsUSA</span>
           </div>
-
-          <div class="skillsusa-content">
-            <span class="section-label">Student Leadership</span>
-
-            <h2>
-              Develop leadership, teamwork, and career-readiness skills.
-            </h2>
-
-            <p>
-              SkillsUSA gives students opportunities to strengthen
-              communication, leadership, technical knowledge, and professional
-              confidence.
-            </p>
-
-            <p>
-              Through chapter activities, service, leadership development,
-              and competitive events, students can demonstrate what they have
-              learned while building connections with classmates, educators,
-              and industry professionals.
-            </p>
+          <div class="icon-row-item on-light">
+            <div class="icon-row-badge">✚</div>
+            <div>
+              <h3>Stop the Bleed&reg;</h3>
+              <p>Students learn how to recognize life-threatening bleeding and provide immediate care using direct pressure, wound packing, and tourniquet application.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="careers">
+    <section class="section section-blue" id="skillsusa">
       <div class="container">
         <div class="section-heading">
-          <span class="section-label">Career Exploration</span>
-
-          <h2>
-            Sports medicine can lead to many different healthcare pathways.
-          </h2>
-
-          <p>
-            Students explore the education, responsibilities, working
-            conditions, and skills associated with careers across healthcare,
-            fitness, rehabilitation, and human performance.
-          </p>
+          <p class="eyebrow eyebrow-light">Student Leadership</p>
+          <h2>Develop leadership, teamwork, and career-readiness skills through SkillsUSA.</h2>
+          <p>SkillsUSA gives students opportunities to strengthen communication, leadership, technical knowledge, and professional confidence.</p>
+          <p>Through chapter activities, service, leadership development, and competitive events, students can demonstrate what they have learned while building connections with classmates, educators, and industry professionals.</p>
         </div>
+      </div>
+    </section>
 
-        <div class="career-grid">
-          <div class="career-item">
-            <strong>Athletic Trainer</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Physical Therapist</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Physical Therapist Assistant</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Occupational Therapist</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Physician</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Physician Assistant</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Registered Nurse</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Emergency Medical Technician</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Exercise Physiologist</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Strength and Conditioning Specialist</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Rehabilitation Specialist</strong>
-          </div>
-
-          <div class="career-item">
-            <strong>Other Allied Health Careers</strong>
-          </div>
+    <section class="section section-light" id="careers">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Career Exploration</p>
+          <h2>Sports medicine can lead to many different healthcare pathways.</h2>
+          <p>Students explore the education, responsibilities, working conditions, and skills associated with careers across healthcare, fitness, rehabilitation, and human performance.</p>
         </div>
-
-        <p class="career-note">
-          Career exploration helps students identify personal strengths,
-          understand educational requirements, and make informed decisions
-          about college, certification programs, and future employment.
+        <div class="chip-cloud">
+          <span>Athletic Trainer</span>
+          <span>Physical Therapist</span>
+          <span>Physical Therapist Assistant</span>
+          <span>Occupational Therapist</span>
+          <span>Physician</span>
+          <span>Physician Assistant</span>
+          <span>Registered Nurse</span>
+          <span>Emergency Medical Technician</span>
+          <span>Exercise Physiologist</span>
+          <span>Strength and Conditioning Specialist</span>
+          <span>Rehabilitation Specialist</span>
+          <span>Other Allied Health Careers</span>
+        </div>
+        <p style="text-align:center;color:var(--gray-600);margin-top:24px">
+          Career exploration helps students identify personal strengths, understand educational requirements, and make informed decisions about college, certification programs, and future employment.
         </p>
       </div>
     </section>
 
-    <section class="cta">
+    <section class="cta-section">
       <div class="container cta-inner">
         <div>
-          <h2>
-            From Baldwin Park to Healthcare Careers.
-          </h2>
-
-          <p>
-            The Sports Medicine Pathway gives students a place to discover
-            their interests, develop practical skills, earn college credit,
-            and begin preparing for the next step.
-          </p>
+          <h2>From Baldwin Park to Healthcare Careers.</h2>
+          <p>The Sports Medicine Pathway gives students a place to discover their interests, develop practical skills, earn college credit, and begin preparing for the next step.</p>
         </div>
-
-        <a class="button button-primary" href="index.html">
-          Return to Academy Home
-        </a>
+        <a class="btn btn-white" href="index.html">Return to Academy Home</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h2>Baldwin Park Medical Academy</h2>
-
-          <p>
-            Preparing students for college, healthcare careers, and lifelong
-            learning through rigorous academics, hands-on experiences, and
-            professional connections.
-          </p>
-        </div>
-
-        <div>
-          <h3>Pathways</h3>
-
-          <ul class="footer-links">
-            <li>
-              <a href="sports-medicine.html">Sports Medicine</a>
-            </li>
-
-            <li>
-              <a href="careers.html">Medical Careers</a>
-            </li>
-
-            <li>
-              <a href="simulation-center.html">Simulation Center</a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Explore</h3>
-
-          <ul class="footer-links">
-            <li>
-              <a href="certifications.html">Certifications</a>
-            </li>
-
-            <li>
-              <a href="alumni.html">Alumni</a>
-            </li>
-
-            <li>
-              <a href="index.html">Academy Home</a>
-            </li>
-          </ul>
-        </div>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Baldwin Park Medical Academy</div>
+        <p>Preparing tomorrow&rsquo;s healthcare professionals.</p>
       </div>
-
-      <div class="footer-bottom">
-        <p>
-          &copy; <span id="current-year"></span> Baldwin Park Medical Academy.
-          All rights reserved.
-        </p>
+      <div>
+        <strong>Explore</strong>
+        <a href="index.html#programs">Programs</a>
+        <a href="simulation-center.html">Simulation Center</a>
+        <a href="careers.html">Careers</a>
       </div>
+      <div>
+        <strong>Community</strong>
+        <a href="alumni.html">Alumni</a>
+        <a href="index.html#about">About</a>
+        <button class="footer-button" data-info="Contact the Academy">Contact</button>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>Prototype for planning and district review</span>
+      <span>© 2026 Baldwin Park Medical Academy</span>
     </div>
   </footer>
 
-  <script>
-    const menuButton = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector(".site-nav");
+  <div class="modal-backdrop" id="login-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close dialog">×</button>
+      <div class="modal-icon">🩺</div>
+      <h2 id="modal-title">Student Academy Preview</h2>
+      <p>This prototype shows where students will eventually sign in using a district-approved account.</p>
+      <div class="login-preview">
+        <label>Email or student ID<input type="text" placeholder="student@district.org" disabled></label>
+        <label>Password<input type="password" placeholder="••••••••" disabled></label>
+        <button class="btn btn-primary" id="demo-dashboard">View Demo Dashboard</button>
+      </div>
+      <small>No student information is collected in this prototype.</small>
+    </div>
+  </div>
 
-    if (menuButton && navigation) {
-      menuButton.addEventListener("click", function () {
-        const isOpen = navigation.classList.toggle("is-open");
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-        menuButton.setAttribute("aria-expanded", String(isOpen));
-        menuButton.textContent = isOpen ? "Close" : "Menu";
-      });
-
-      navigation.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          navigation.classList.remove("is-open");
-          menuButton.setAttribute("aria-expanded", "false");
-          menuButton.textContent = "Menu";
-        });
-      });
-    }
-
-    const yearElement = document.getElementById("current-year");
-
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -3,510 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta
-    name="description"
-    content="Explore the Baldwin Park High School Simulation Learning Center, where students develop clinical skills, teamwork, confidence, and career readiness through realistic healthcare experiences."
-  />
-
+  <meta name="description" content="Explore the Baldwin Park High School Simulation Learning Center, where students develop clinical skills, teamwork, confidence, and career readiness through realistic healthcare experiences." />
   <title>Simulation Learning Center | Baldwin Park Medical Academy</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap"
-    rel="stylesheet"
-  />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    .page-hero {
-      padding: 5rem 0;
-      background: linear-gradient(120deg, #eef7ff, #dfeffd);
-    }
-
-    .page-hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .page-eyebrow {
-      margin: 0 0 1rem;
-      color: #075a9c;
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    .page-hero h1 {
-      max-width: 760px;
-      margin: 0 0 1.5rem;
-      color: #073f70;
-      font-family: "Merriweather", Georgia, serif;
-      font-size: clamp(2.8rem, 6vw, 5.1rem);
-      line-height: 1.08;
-    }
-
-    .page-intro {
-      max-width: 720px;
-      margin: 0;
-      color: #425466;
-      font-size: 1.2rem;
-      line-height: 1.75;
-    }
-
-    .hero-button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .simulation-showcase {
-      position: relative;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      gap: 1.25rem;
-      min-height: 500px;
-      padding: 2rem;
-      overflow: hidden;
-      border-radius: 34px;
-      background: linear-gradient(145deg, #0865ad, #063f76);
-      box-shadow: 0 28px 60px rgba(0, 64, 112, 0.23);
-    }
-
-    .simulation-showcase::before {
-      content: "";
-      position: absolute;
-      top: -80px;
-      right: -70px;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .simulation-showcase::after {
-      content: "";
-      position: absolute;
-      bottom: -110px;
-      left: -80px;
-      width: 280px;
-      height: 280px;
-      border: 2px solid rgba(255, 255, 255, 0.09);
-      border-radius: 50%;
-    }
-
-    .showcase-card {
-      position: relative;
-      z-index: 2;
-      padding: 1.35rem 1.5rem;
-      border-radius: 20px;
-      background: #ffffff;
-      box-shadow: 0 16px 35px rgba(0, 42, 78, 0.19);
-    }
-
-    .showcase-card-top {
-      justify-self: start;
-      width: min(100%, 290px);
-    }
-
-    .showcase-card-bottom {
-      justify-self: end;
-      width: min(100%, 310px);
-    }
-
-    .showcase-card strong {
-      display: block;
-      margin-bottom: 0.35rem;
-      color: #073f70;
-      font-size: 1.05rem;
-    }
-
-    .showcase-card span {
-      display: block;
-      color: #667788;
-      font-size: 0.92rem;
-      line-height: 1.5;
-    }
-
-    .showcase-center {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 190px;
-    }
-
-    .medical-symbol {
-      position: relative;
-      width: min(100%, 390px);
-      height: 150px;
-    }
-
-    .medical-symbol::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      transform: translateY(-50%);
-      border-radius: 99px;
-      background: rgba(255, 255, 255, 0.92);
-    }
-
-    .medical-symbol::after {
-      content: "+";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -52%);
-      color: #ffffff;
-      font-size: 8rem;
-      font-weight: 300;
-      line-height: 1;
-    }
-
-    .pulse-mark {
-      position: absolute;
-      z-index: 3;
-      top: 50%;
-      left: 8%;
-      width: 44%;
-      height: 60px;
-      transform: translateY(-50%);
-    }
-
-    .pulse-mark svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .showcase-caption {
-      position: relative;
-      z-index: 2;
-      align-self: end;
-      color: rgba(255, 255, 255, 0.82);
-      font-size: 0.88rem;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    .section-block {
-      padding: 5rem 0;
-    }
-
-    .section-block-alt {
-      background: #f4f8fb;
-    }
-
-    .section-heading {
-      max-width: 800px;
-      margin-bottom: 2.75rem;
-    }
-
-    .section-heading h2 {
-      margin: 0 0 1rem;
-      color: #073f70;
-      font-family: "Merriweather", Georgia, serif;
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      line-height: 1.2;
-    }
-
-    .section-heading p {
-      margin: 0;
-      color: #536577;
-      font-size: 1.08rem;
-      line-height: 1.75;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    .feature-card {
-      padding: 2rem;
-      border: 1px solid #dbe7f0;
-      border-radius: 24px;
-      background: #ffffff;
-      box-shadow: 0 14px 32px rgba(0, 62, 108, 0.08);
-    }
-
-    .feature-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 52px;
-      height: 52px;
-      margin-bottom: 1.25rem;
-      border-radius: 16px;
-      background: #e3f1fc;
-      color: #075a9c;
-      font-size: 1.1rem;
-      font-weight: 800;
-    }
-
-    .feature-card h3 {
-      margin: 0 0 0.75rem;
-      color: #073f70;
-      font-size: 1.25rem;
-    }
-
-    .feature-card p {
-      margin: 0;
-      color: #5a6b7b;
-      line-height: 1.7;
-    }
-
-    .skills-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .skills-panel {
-      padding: 2.4rem;
-      border-radius: 26px;
-      background: #073f70;
-      color: #ffffff;
-      box-shadow: 0 20px 42px rgba(0, 49, 89, 0.16);
-    }
-
-    .skills-panel .page-eyebrow {
-      color: #b8dcf7;
-    }
-
-    .skills-panel h2 {
-      margin: 0 0 1rem;
-      color: #ffffff;
-      font-family: "Merriweather", Georgia, serif;
-      font-size: 2rem;
-      line-height: 1.35;
-    }
-
-    .skills-panel p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.88);
-      line-height: 1.75;
-    }
-
-    .skills-list {
-      display: grid;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .skills-list div {
-      padding: 1rem 1.1rem;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.12);
-      color: #ffffff;
-      font-weight: 600;
-    }
-
-    .learning-list {
-      display: grid;
-      gap: 0.35rem;
-    }
-
-    .learning-item {
-      display: grid;
-      grid-template-columns: 52px 1fr;
-      gap: 1rem;
-      padding: 1.25rem;
-      border-bottom: 1px solid #dbe7f0;
-    }
-
-    .learning-item:last-child {
-      border-bottom: 0;
-    }
-
-    .learning-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: #e3f1fc;
-      color: #075a9c;
-      font-weight: 800;
-    }
-
-    .learning-item h3 {
-      margin: 0 0 0.35rem;
-      color: #073f70;
-      font-size: 1.1rem;
-    }
-
-    .learning-item p {
-      margin: 0;
-      color: #5a6b7b;
-      line-height: 1.65;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    .process-card {
-      position: relative;
-      padding: 2rem;
-      border-radius: 24px;
-      background: #ffffff;
-      box-shadow: 0 14px 32px rgba(0, 62, 108, 0.08);
-    }
-
-    .process-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 2rem;
-      width: 62px;
-      height: 5px;
-      border-radius: 99px;
-      background: #0b69ad;
-    }
-
-    .process-card h3 {
-      margin: 0 0 0.75rem;
-      color: #073f70;
-      font-size: 1.25rem;
-    }
-
-    .process-card p {
-      margin: 0;
-      color: #5a6b7b;
-      line-height: 1.7;
-    }
-
-    .cta-panel {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 2rem;
-      align-items: center;
-      padding: 3rem;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #075a9c, #073f70);
-      color: #ffffff;
-      box-shadow: 0 22px 44px rgba(0, 49, 89, 0.18);
-    }
-
-    .cta-panel h2 {
-      margin: 0 0 0.75rem;
-      color: #ffffff;
-      font-family: "Merriweather", Georgia, serif;
-      font-size: clamp(1.9rem, 4vw, 2.8rem);
-      line-height: 1.3;
-    }
-
-    .cta-panel p {
-      max-width: 760px;
-      margin: 0;
-      color: rgba(255, 255, 255, 0.9);
-      line-height: 1.7;
-    }
-
-    .site-footer-simple {
-      padding: 2.5rem 0;
-      background: #052f55;
-      color: rgba(255, 255, 255, 0.86);
-    }
-
-    .footer-inner-simple {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .footer-inner-simple p {
-      margin: 0;
-    }
-
-    .footer-inner-simple a {
-      color: #ffffff;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    @media (max-width: 950px) {
-      .page-hero-grid,
-      .skills-layout,
-      .cta-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .feature-grid,
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .simulation-showcase {
-        min-height: 450px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .page-hero,
-      .section-block {
-        padding: 3.5rem 0;
-      }
-
-      .hero-button-row {
-        flex-direction: column;
-      }
-
-      .hero-button-row .btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      .simulation-showcase {
-        min-height: 420px;
-        padding: 1.25rem;
-        border-radius: 26px;
-      }
-
-      .showcase-card-top,
-      .showcase-card-bottom {
-        justify-self: stretch;
-        width: auto;
-      }
-
-      .medical-symbol {
-        height: 120px;
-      }
-
-      .medical-symbol::after {
-        font-size: 6rem;
-      }
-
-      .cta-panel {
-        padding: 2rem;
-      }
-
-      .footer-inner-simple {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
 </head>
-
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
@@ -519,382 +22,227 @@
     </div>
 
     <div class="container nav-wrap">
-      <a
-        class="brand"
-        href="index.html"
-        aria-label="Baldwin Park Medical Academy home"
-      >
+      <a class="brand" href="index.html" aria-label="Baldwin Park Medical Academy home">
         <div class="brand-mark" aria-hidden="true">BP</div>
-
         <div>
           <div class="brand-title">Baldwin Park</div>
           <div class="brand-subtitle">Medical Academy</div>
         </div>
       </a>
 
-      <button
-        class="menu-toggle"
-        aria-expanded="false"
-        aria-controls="site-nav"
-        type="button"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
         <span class="sr-only">Toggle navigation</span>
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="index.html#programs">Programs</a>
-
-        <a href="simulation-center.html" aria-current="page">
-          Simulation Center
-        </a>
-
+        <a href="simulation-center.html" aria-current="page">Simulation Center</a>
         <a href="sports-medicine.html">Sports Medicine</a>
         <a href="terminology.html">Terminology</a>
         <a href="careers.html">Careers</a>
         <a href="alumni.html">Alumni</a>
-        <a href="index.html#about">About</a>
-
-        <button class="nav-login" type="button" data-open-modal>
-          Student Login
-        </button>
+        <button class="nav-login" data-open-modal>Student Login</button>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="page-eyebrow">
-            Simulation • Clinical Skills • Teamwork • Career Readiness
-          </p>
-
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Simulation &bull; Clinical Skills &bull; Teamwork &bull; Career Readiness</p>
           <h1>Simulation Learning Center</h1>
-
-          <p class="page-intro">
-            Experience realistic patient care scenarios in Baldwin Park High
-            School's Simulation Learning Center. Students develop confidence,
-            clinical judgment, teamwork, and hands-on skills in a safe learning
-            environment.
+          <p class="hero-text">
+            Experience realistic patient care scenarios in Baldwin Park High School&rsquo;s Simulation Learning
+            Center. Students develop confidence, clinical judgment, teamwork, and hands-on skills in a safe
+            learning environment.
           </p>
-
-          <div class="hero-button-row">
-            <a class="btn btn-primary" href="#learning-spaces">
-              Explore the Learning Spaces
-            </a>
-
-            <a class="btn btn-secondary" href="#student-learning">
-              What Students Learn
-            </a>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#learning-spaces">Explore the Learning Spaces</a>
+            <a class="btn btn-secondary" href="#student-learning">What Students Learn</a>
           </div>
         </div>
 
-        <div
-          class="simulation-showcase"
-          role="img"
-          aria-label="Graphic representing medical simulation, clinical skills, and teamwork"
-        >
-          <div class="showcase-card showcase-card-top">
-            <strong>Hands-on Clinical Skills</strong>
-            <span>
-              Students practice procedures, patient care, and safety before
-              entering real healthcare settings.
-            </span>
+        <div class="hero-visual" role="img" aria-label="Graphic representing medical simulation, clinical skills, and teamwork">
+          <div class="visual-panel visual-main">
+            <div class="medical-cross">+</div>
+            <div class="pulse-line" aria-hidden="true"></div>
+            <div class="visual-label">Practice &bull; Perform &bull; Reflect &bull; Improve</div>
           </div>
+          <div class="visual-card card-one">
+            <span class="icon">🩺</span>
+            <strong>Hands-on Clinical Skills</strong>
+            <small>Procedures, patient care, and safety</small>
+          </div>
+          <div class="visual-card card-two">
+            <span class="icon">🤝</span>
+            <strong>Clinical Teamwork</strong>
+            <small>Communication and coordinated response</small>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="showcase-center">
-            <div class="medical-symbol">
-              <div class="pulse-mark" aria-hidden="true">
-                <svg viewBox="0 0 300 70" role="presentation">
-                  <polyline
-                    points="0,38 72,38 94,18 116,55 142,8 168,38 300,38"
-                    fill="none"
-                    stroke="white"
-                    stroke-width="5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+    <section id="learning-spaces" class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Purposeful Learning Environments</p>
+          <h2>Realistic spaces for meaningful healthcare learning</h2>
+          <p>
+            The Simulation Learning Center gives students opportunities to practice clinical decision-making,
+            patient communication, teamwork, and technical skills before entering real healthcare environments.
+          </p>
+        </div>
+        <div class="card-grid three">
+          <article class="program-card">
+            <div class="program-icon">01</div>
+            <h3>Emergency Care Bay</h3>
+            <p>Students respond to urgent patient scenarios while practicing assessment, communication, safety, and coordinated team response.</p>
+          </article>
+          <article class="program-card">
+            <div class="program-icon">02</div>
+            <h3>Hospital and Patient-Care Bay</h3>
+            <p>A realistic patient-care setting supports instruction in vital signs, positioning, mobility, hygiene, documentation, and bedside communication.</p>
+          </article>
+          <article class="program-card">
+            <div class="program-icon">03</div>
+            <h3>Skilled Nursing and Examination Bay</h3>
+            <p>Students develop foundational healthcare skills while learning professionalism, dignity, infection control, and patient-centered care.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="student-learning" class="section section-blue">
+      <div class="container split-section">
+        <div>
+          <p class="eyebrow eyebrow-light">Learning Through Practice</p>
+          <h2>Students practice more than procedures</h2>
+          <p>
+            Simulation helps students combine healthcare knowledge with communication, critical thinking,
+            professionalism, and teamwork.
+          </p>
+          <ul class="check-list">
+            <li>Clinical confidence</li>
+            <li>Patient communication</li>
+            <li>Team-based problem solving</li>
+            <li>Safety and infection control</li>
+            <li>Reflection and improvement</li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow eyebrow-light">Student Learning</p>
+          <h2>From classroom knowledge to clinical application</h2>
+          <div class="icon-row-list">
+            <div class="icon-row-item">
+              <div class="icon-row-badge">A</div>
+              <div>
+                <h3>Assess</h3>
+                <p>Gather information, recognize patient needs, take vital signs, and identify changes that require attention.</p>
+              </div>
+            </div>
+            <div class="icon-row-item">
+              <div class="icon-row-badge">C</div>
+              <div>
+                <h3>Communicate</h3>
+                <p>Practice respectful patient interaction, teamwork, handoffs, documentation, and professional communication.</p>
+              </div>
+            </div>
+            <div class="icon-row-item">
+              <div class="icon-row-badge">R</div>
+              <div>
+                <h3>Respond</h3>
+                <p>Apply classroom learning to realistic scenarios and make thoughtful decisions in a structured, supportive environment.</p>
+              </div>
+            </div>
+            <div class="icon-row-item">
+              <div class="icon-row-badge">R</div>
+              <div>
+                <h3>Reflect</h3>
+                <p>Review performance, discuss decisions, learn from mistakes, and identify ways to improve future patient care.</p>
               </div>
             </div>
           </div>
-
-          <div class="showcase-card showcase-card-bottom">
-            <strong>Clinical Teamwork</strong>
-            <span>
-              Students communicate, solve problems, make decisions, and respond
-              together during realistic scenarios.
-            </span>
-          </div>
-
-          <div class="showcase-caption">
-            Practice • Perform • Reflect • Improve
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="learning-spaces" class="section-block">
+    <section class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="page-eyebrow">Purposeful Learning Environments</p>
-
-          <h2>Realistic spaces for meaningful healthcare learning</h2>
-
-          <p>
-            The Simulation Learning Center gives students opportunities to
-            practice clinical decision-making, patient communication, teamwork,
-            and technical skills before entering real healthcare environments.
-          </p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-number">01</div>
-
-            <h3>Emergency Care Bay</h3>
-
-            <p>
-              Students respond to urgent patient scenarios while practicing
-              assessment, communication, safety, and coordinated team response.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-number">02</div>
-
-            <h3>Hospital and Patient-Care Bay</h3>
-
-            <p>
-              A realistic patient-care setting supports instruction in vital
-              signs, positioning, mobility, hygiene, documentation, and bedside
-              communication.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-number">03</div>
-
-            <h3>Skilled Nursing and Examination Bay</h3>
-
-            <p>
-              Students develop foundational healthcare skills while learning
-              professionalism, dignity, infection control, and patient-centered
-              care.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="student-learning" class="section-block section-block-alt">
-      <div class="container skills-layout">
-        <div class="skills-panel">
-          <p class="page-eyebrow">Learning Through Practice</p>
-
-          <h2>Students practice more than procedures</h2>
-
-          <p>
-            Simulation helps students combine healthcare knowledge with
-            communication, critical thinking, professionalism, and teamwork.
-          </p>
-
-          <div class="skills-list">
-            <div>Clinical confidence</div>
-            <div>Patient communication</div>
-            <div>Team-based problem solving</div>
-            <div>Safety and infection control</div>
-            <div>Reflection and improvement</div>
-          </div>
-        </div>
-
-        <div>
-          <div class="section-heading">
-            <p class="page-eyebrow">Student Learning</p>
-
-            <h2>From classroom knowledge to clinical application</h2>
-          </div>
-
-          <div class="learning-list">
-            <article class="learning-item">
-              <div class="learning-icon">A</div>
-
-              <div>
-                <h3>Assess</h3>
-
-                <p>
-                  Gather information, recognize patient needs, take vital signs,
-                  and identify changes that require attention.
-                </p>
-              </div>
-            </article>
-
-            <article class="learning-item">
-              <div class="learning-icon">C</div>
-
-              <div>
-                <h3>Communicate</h3>
-
-                <p>
-                  Practice respectful patient interaction, teamwork, handoffs,
-                  documentation, and professional communication.
-                </p>
-              </div>
-            </article>
-
-            <article class="learning-item">
-              <div class="learning-icon">R</div>
-
-              <div>
-                <h3>Respond</h3>
-
-                <p>
-                  Apply classroom learning to realistic scenarios and make
-                  thoughtful decisions in a structured, supportive environment.
-                </p>
-              </div>
-            </article>
-
-            <article class="learning-item">
-              <div class="learning-icon">R</div>
-
-              <div>
-                <h3>Reflect</h3>
-
-                <p>
-                  Review performance, discuss decisions, learn from mistakes,
-                  and identify ways to improve future patient care.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <div class="container">
-        <div class="section-heading">
-          <p class="page-eyebrow">The Simulation Process</p>
-
+          <p class="eyebrow">The Simulation Process</p>
           <h2>Practice, make decisions, reflect, and improve</h2>
-
           <p>
-            Simulation creates a safe place for students to apply their
-            knowledge. Scenarios can be paused, discussed, repeated, and adapted
-            as students develop new levels of competence and responsibility.
+            Simulation creates a safe place for students to apply their knowledge. Scenarios can be paused,
+            discussed, repeated, and adapted as students develop new levels of competence and responsibility.
           </p>
         </div>
-
-        <div class="process-grid">
-          <article class="process-card">
+        <div class="card-grid three">
+          <article class="program-card">
             <h3>Preparation</h3>
-
-            <p>
-              Students review the patient situation, learning objectives,
-              equipment, safety expectations, and assigned team roles.
-            </p>
+            <p>Students review the patient situation, learning objectives, equipment, safety expectations, and assigned team roles.</p>
           </article>
-
-          <article class="process-card">
+          <article class="program-card">
             <h3>Simulation</h3>
-
-            <p>
-              Students participate in realistic scenarios requiring clinical
-              skills, communication, decision-making, and teamwork.
-            </p>
+            <p>Students participate in realistic scenarios requiring clinical skills, communication, decision-making, and teamwork.</p>
           </article>
-
-          <article class="process-card">
+          <article class="program-card">
             <h3>Debriefing</h3>
-
-            <p>
-              Students reflect on what happened, explain their decisions,
-              receive feedback, and plan how to improve.
-            </p>
+            <p>Students reflect on what happened, explain their decisions, receive feedback, and plan how to improve.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-block section-block-alt">
-      <div class="container">
-        <div class="cta-panel">
-          <div>
-            <h2>Preparing students for healthcare education and careers</h2>
-
-            <p>
-              The Simulation Learning Center connects academic content,
-              technical skill development, career exploration, and professional
-              expectations in one active learning environment.
-            </p>
-          </div>
-
-          <a class="btn btn-secondary" href="index.html#programs">
-            Explore Academy Programs
-          </a>
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <div>
+          <h2>Preparing students for healthcare education and careers</h2>
+          <p>The Simulation Learning Center connects academic content, technical skill development, career exploration, and professional expectations in one active learning environment.</p>
         </div>
+        <a class="btn btn-white" href="index.html#programs">Explore Academy Programs</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer-simple">
-    <div class="container footer-inner-simple">
-      <p>© Baldwin Park High School Medical Academy</p>
-      <a href="index.html">Return to Home</a>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Baldwin Park Medical Academy</div>
+        <p>Preparing tomorrow&rsquo;s healthcare professionals.</p>
+      </div>
+      <div>
+        <strong>Explore</strong>
+        <a href="index.html#programs">Programs</a>
+        <a href="simulation-center.html">Simulation Center</a>
+        <a href="careers.html">Careers</a>
+      </div>
+      <div>
+        <strong>Community</strong>
+        <a href="alumni.html">Alumni</a>
+        <a href="index.html#about">About</a>
+        <button class="footer-button" data-info="Contact the Academy">Contact</button>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>Prototype for planning and district review</span>
+      <span>© 2026 Baldwin Park Medical Academy</span>
     </div>
   </footer>
 
-  <div
-    class="modal-backdrop"
-    id="login-modal"
-    hidden
-    role="presentation"
-    aria-hidden="true"
-  >
-    <div
-      class="modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="login-title"
-    >
-      <button
-        class="modal-close"
-        type="button"
-        aria-label="Close student login"
-        data-close-modal
-      >
-        ×
-      </button>
-
-      <h2 id="login-title">Student Login</h2>
-
-      <p>
-        The student learning portal will be connected here in a future phase.
-      </p>
-
+  <div class="modal-backdrop" id="login-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close dialog">×</button>
+      <div class="modal-icon">🩺</div>
+      <h2 id="modal-title">Student Academy Preview</h2>
+      <p>This prototype shows where students will eventually sign in using a district-approved account.</p>
       <div class="login-preview">
-        <label>
-          Email or student ID
-          <input type="text" autocomplete="username" />
-        </label>
-
-        <label>
-          Password
-          <input type="password" autocomplete="current-password" />
-        </label>
-
-        <button class="btn btn-primary" type="button">
-          Continue
-        </button>
+        <label>Email or student ID<input type="text" placeholder="student@district.org" disabled></label>
+        <label>Password<input type="password" placeholder="••••••••" disabled></label>
+        <button class="btn btn-primary" id="demo-dashboard">View Demo Dashboard</button>
       </div>
-
-      <small>
-        No student information is collected through this demonstration.
-      </small>
+      <small>No student information is collected in this prototype.</small>
     </div>
   </div>
 
