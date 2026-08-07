@@ -631,6 +631,28 @@ Keep the tone warm, professional, and genuine — not corporate or overly formal
       return result.content?.[0]?.text || '';
     }
 
+    async function submitToGoogleSheets(data) {
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxIt_UbsiELxKBa4qNkWpgoE9TfuftniCwbFGpFofFLPy0HFWzTsC1VUQk4x7i_1P7-Nw/exec';
+      const payload = {
+        firstName:    data.firstName,
+        lastName:     data.lastName,
+        gradYear:     data.gradYear,
+        email:        data.email,
+        role:         data.role,
+        employer:     data.employer || '',
+        involvement:  data.involvement,
+        availability: data.availability.join(', '),
+        message:      data.message || '',
+        submittedAt:  new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' })
+      };
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    }
+
     async function handleSubmit() {
       const errBox = document.getElementById('form-error');
       errBox.hidden = true;
@@ -664,16 +686,19 @@ Keep the tone warm, professional, and genuine — not corporate or overly formal
       document.getElementById('success-heading').textContent =
         `Welcome back, ${data.firstName}!`;
 
-      // Try AI welcome message
+      // Submit to Google Sheets and generate AI welcome simultaneously
       try {
-        const welcome = await generateWelcome(data);
+        const [welcome] = await Promise.all([
+          generateWelcome(data),
+          submitToGoogleSheets(data)
+        ]);
         if (welcome) {
           const box = document.getElementById('ai-welcome-box');
           document.getElementById('ai-welcome-text').textContent = welcome;
           box.hidden = false;
         }
       } catch (_) {
-        // Silently skip AI message if unavailable — form success still shows
+        // Silently continue — show success even if one part fails
       }
 
       showView('success-state');
